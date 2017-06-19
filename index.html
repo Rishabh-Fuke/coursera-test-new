@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Personality Teller</title>
+  <style>
+      body{
+          background-color:rgb(107, 30, 30);
+          color:rgb(255, 255, 255);
+      }
+      
+  </style>
+ </head>
+ <body>
+ 
+    <h1>Sohum's guess...</h1>
+    
+    <h4>Give a name, it's adjective, another person's name and his adjective</h4>
+    <h4>And The Great Lord Sohum will give  you his <em>perfect</em> guess.</h4>
+     
+    <ul>
+      <li>Name: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone else's name: <input type="text" id="person"></li>
+      <li>That person's adjective: <input type = "text" id = "thadj"></li>
+    </ul>
+     
+    <button id="lib-button">Know the Great Lord's Guess.</button>
+      
+    <p> 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+        var storyDiv = document.getElementById("story");
+        var noun = document.getElementById("noun").value;
+        var adjective = document.getElementById("adjective").value;
+        var person = document.getElementById("person").value;
+        var thadj =  document.getElementById("thadj").value;
+            storyDiv.innerHTML = "The Great Lord Sohum's perfect guess is that " + noun + "  is " +  adjective + " and " + person + " is " + thadj + " which is entirely true.";
+        };
+        libButton.addEventListener('click', libIt);
+        
+    </script>
+  
+ </body>
+</html>
